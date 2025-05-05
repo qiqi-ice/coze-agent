@@ -58,21 +58,21 @@
 <body>
     <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/cn/index.js"></script>
     <script>
-    new CozeWebSDK.WebChatClient({
-        config: {
-            bot_id: '7493071132380594230',
-        },
-        componentProps: {
-            title: 'Coze',
-        },
-        auth: {
-            type: 'token',
-            token: 'pat_mdR1BzFLzqRBFqO2cQNGRJUvZMqY9mASvtr89ugaDWfJM93BnLRvWSdE3r7Bilac',
-            onRefreshToken: function () {
-                return 'pat_mdR1BzFLzqRBFqO2cQNGRJUvZMqY9mASvtr89ugaDWfJM93BnLRvWSdE3r7Bilac'
+        new CozeWebSDK.WebChatClient({
+            config: {
+                bot_id: '7500938433796259874',
+            },
+            componentProps: {
+                title: 'Coze',
+            },
+            auth: {
+                type: 'token',
+                token: 'pat_mdR1BzFLzqRBFqO2cQNGRJUvZMqY9mASvtr89ugaDWfJM93BnLRvWSdE3r7Bilac',
+                onRefreshToken: function () {
+                    return 'pat_mdR1BzFLzqRBFqO2cQNGRJUvZMqY9mASvtr89ugaDWfJM93BnLRvWSdE3r7Bilac'
+                }
             }
-    }
-    });
+        });
     </script>
     <h1>图书阅读助手</h1>
     <h2>用智能体帮助学生阅读图书，能够与学生进行讨论图书情节，帮助学生理解书籍中的含义。</h2>
