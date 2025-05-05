@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>图书阅读助手</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      color: #4a90e2;
+    }
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .book-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 16px;
+      transition: transform 0.3s;
+    }
+    .book-card:hover {
+      transform: translateY(-5px);
+    }
+    .cover, .illustration {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    .desc {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    .label {
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/cn/index.js"></script>
+    <script>
+    new CozeWebSDK.WebChatClient({
+        config: {
+            bot_id: '7493071132380594230',
+        },
+        componentProps: {
+            title: 'Coze',
+        },
+        auth: {
+            type: 'token',
+            token: 'pat_mdR1BzFLzqRBFqO2cQNGRJUvZMqY9mASvtr89ugaDWfJM93BnLRvWSdE3r7Bilac',
+            onRefreshToken: function () {
+                return 'pat_mdR1BzFLzqRBFqO2cQNGRJUvZMqY9mASvtr89ugaDWfJM93BnLRvWSdE3r7Bilac'
+            }
+    }
+    });
+    </script>
+    <h1>图书阅读助手</h1>
+    <h2>用智能体帮助学生阅读图书，能够与学生进行讨论图书情节，帮助学生理解书籍中的含义。</h2>
+
+  <div class="book-grid">
+
+
+     <div class="book-card">
+      <img class="cover" src="css/images/book3.png" alt="图书封面">
+      <div class="title">三国演义</div>
+      <div class="desc">以三国时期的历史为背景，讲述了魏、蜀、吴三国争霸的故事。通过诸葛亮、曹操、刘备、孙权等英雄人物的智勇与争斗，展现了忠诚、智谋、权力斗争等复杂的政治与军事局面。小说通过众多的战役与谋略，塑造了深刻的历史人物形象，成为中国文学史上的经典之作。</div>
+    </div>
+
+     <div class="book-card">
+      <img class="cover" src="css/images/book4.png" alt="图书封面">
+      <div class="title">红楼梦</div>
+      <div class="desc">中国古代文学的巅峰之作，讲述了贾宝玉与林黛玉、薛宝钗等人的爱情悲剧以及贾、史、王、薛四大家族的兴衰。通过贾宝玉这一人物的成长与变化，展现了封建社会的腐朽与崩塌。小说深刻描写了人物性格、社会背景及人性的复杂。</div>
+    </div>
+
+     <div class="book-card">
+      <img class="cover" src="css/images/book5.png" alt="图书封面">
+      <div class="title">西游记</div>
+      <div class="desc">讲述了唐僧师徒四人西天取经的故事，书中的孙悟空、猪八戒、沙僧、唐僧形象深入人心。孙悟空的机智与勇敢，猪八戒的憨厚与幽默，以及唐僧的坚定与仁慈，构成了故事的核心。全书通过奇幻的冒险表现了坚持、忠诚、智慧与成长。</div>
+    </div>
+
+     <div class="book-card">
+      <img class="cover" src="css/images/book6.png" alt="图书封面">
+      <div class="title">水浒传</div>
+      <div class="desc">讲述北宋时期，108位梁山好汉反抗腐败政府的故事。这些英雄人物因种种原因被迫聚集在梁山，揭示了民众反抗压迫、为正义而战的主题。小说充满了英雄豪杰的气概，同时也展示了忠诚、义气与英雄主义的复杂性。</div>
+    </div>
+
+
+    <!-- 可以继续添加更多图书项 -->
+
+  </div>
+</body>
+</html>
